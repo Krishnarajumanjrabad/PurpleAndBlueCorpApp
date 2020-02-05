@@ -1,0 +1,8 @@
+{
+  "name": "purpleAndBlueCorpApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "ionic-angular",
+  "id": "384db105"
+}
