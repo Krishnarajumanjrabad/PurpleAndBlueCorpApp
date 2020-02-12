@@ -18,9 +18,9 @@ export class HomePage implements OnInit {
   constructor() {
     this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
     this.currentUser = this.currentUserSubject.asObservable();
-    console.log(this.currentUserSubject.value.user.name);
-    this.userInfo =  this.currentUserSubject.value.user.name;
-   
+    console.log(this.currentUserSubject.value);
+    this.userInfo =  this.currentUserSubject.value;
+
   }
 
   ngOnInit(): void {

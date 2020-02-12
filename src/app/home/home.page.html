@@ -6,7 +6,7 @@
     <ion-title class="ion-text-center">
       Purple And Blue Corp App
     </ion-title>
-    <span *ngIf="userInfo" float-end > <small>Welcome {{ userInfo }}</small></span>
+    <span *ngIf="userInfo" float-end > <small>Welcome {{ userInfo.user.name }}</small></span>
 
      <!-- Side menu button -->
      <ion-buttons slot="start">
@@ -17,10 +17,14 @@
 
 <ion-content>
   <div *ngIf="!userInfo">
-    <img src="/assets/images/appImage.PNG" />
+    <ion-item>
+    <img src="/assets/images/appImage.PNG" style="margin: auto;" />
+  </ion-item>
   </div>
   <div *ngIf="userInfo">
-    <img src="/assets/images/marchant.PNG" />
+  <ion-item>
+    <img src="/assets/images/marchant.PNG"  style="margin: auto;"/>
+    </ion-item>
     <p></p>
     <ion-card>
       <ion-list>
