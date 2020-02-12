@@ -2,7 +2,7 @@
 
 Bring up this project 
 
-Step 1:
+Steps:
 
 install nodejs -- get the latest from the site
 https://nodejs.org/dist/v12.16.0/node-v12.16.0-x64.msi  
