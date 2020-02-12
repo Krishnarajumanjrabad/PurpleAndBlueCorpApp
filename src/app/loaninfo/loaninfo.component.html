@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+     Loan Or Goal Information    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="/assets/images/HelpUs.PNG" />
+ 
+  <ion-card >
+   
+    <ion-card-title justify-content-center><img src="/assets/images/studentLoan.PNG" style="height: 200px;width: 200px;margin:auto"></ion-card-title>
+    
+   
+    <ion-item-divider></ion-item-divider>
+    <ion-list>
+      <ion-item>
+        <ion-label position="fixed"> <strong>Loan amount</strong></ion-label>
+        <ion-input type="number" inputmode="numeric" [(ngModel)]="loanAmount" max="12" size="15" style="border:solid;max-width: 30%;margin: auto;"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" text-wrap> <strong> Interest paid per annum </strong> </ion-label>
+        <ion-input type="number" inputmode="numeric"  [(ngModel)]="interestPaid" max="12" size="15" style="border:solid;max-width: 30%;margin: auto;"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" text-wrap > <strong> Number of years </strong></ion-label>
+        <ion-input type="number" inputmode="numeric"  [(ngModel)]="noOfYears" max="5" size="5" style="border:solid;max-width: 15%;margin: auto;"></ion-input>
+      </ion-item>
+      <ion-row justify-content-center>
+        <ion-button expand="block" (click) ='proceed()'>Proceed <ion-icon text-lg-right name="arrow-dropright-circle"></ion-icon></ion-button>
+      </ion-row>
+    </ion-list>
+
+   
+  </ion-card>
+ 
+
+ 
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+   
+  </ion-toolbar>
+</ion-footer>

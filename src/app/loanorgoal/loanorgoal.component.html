@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+     Loan Or Goal Information    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="/assets/images/HelpUs.PNG" />
+ 
+  <ion-card >
+   
+    <ion-card-title text-center> How do you want us to help you?</ion-card-title>
+    
+    <ion-list>
+      <ion-radio-group  (ionChange)='proceed($event)'>
+        <ion-item>
+          <ion-label><img src="/assets/images/studentLoan.PNG" style="height: 200px;width: 200px;"></ion-label>
+          <ion-radio value="studentLoan"> </ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label><img src="/assets/images/personalGoals.PNG" style="height: 200px;width: 200px;"> </ion-label>
+          <ion-radio value="personalGoal"> </ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      
+    </ion-list>
+    
+
+   
+  </ion-card>
+ 
+
+ 
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+   
+  </ion-toolbar>
+</ion-footer>

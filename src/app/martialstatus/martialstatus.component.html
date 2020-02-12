@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+      Matrial Status Information </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="/assets/images/HelpUs.PNG" />
+
+  <ion-card>
+
+    <ion-card-title text-center> Are You a? </ion-card-title>
+    <ion-list>
+      <ion-radio-group (ionChange)="getGroupSelectionValue($event)">
+        <ion-item>
+          <ion-label> <img src="/assets/images/singleImage.PNG" name="student"
+              style="width: 200px;height: 250px; float: inline-end;"></ion-label>
+          <ion-radio name="personType" value="single"></ion-radio>
+          <ion-label><img src="/assets/images/Married.PNG" name="professional"
+              style="width: 200px;height: 250px; float: inline-start;"></ion-label>
+          <ion-radio name="personType" value="married"></ion-radio>
+        </ion-item>
+        <ion-item style="text-align: center;">
+          <ion-label float="start"><strong>Others</strong> </ion-label>
+          <ion-radio name="personType" value="other"></ion-radio>
+        </ion-item>
+        <div *ngIf="selectedOption">
+          <ion-input name="personType" [(ngModel)]="occupationValue" style="border:solid;max-width: 40%;margin: auto;"
+            float="right"></ion-input>
+        </div>
+
+      </ion-radio-group>
+
+    </ion-list>
+    <ion-row justify-content-center>
+      <ion-button expand="block" (click)='process()'>Proceed <ion-icon text-lg-right name="arrow-dropright-circle">
+        </ion-icon>
+      </ion-button>
+    </ion-row>
+
+
+
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Login </ion-title>
+       <!-- Side menu button -->
+     <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="/assets/images/appImage.PNG" />
+
+  <ion-card>
+
+    <ion-card-title class="ion-text-center"> Please sign in to continue </ion-card-title>
+    <form #form="ngForm" (ngSubmit)='processLogin(form)'>
+      <ion-grid>
+
+        <ion-row>
+          <ion-col> <img src="/assets/images/email-icon.PNG" style="width: 55px;height: 30px; float: right;"> </ion-col>
+          <ion-col>
+            <ion-input name="email" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="enter the user id" style="border: solid"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><img src="/assets/images/passwordImg.PNG" style="width: 55px;height: 30px; float: right"></ion-col>
+          <ion-col>
+            <ion-input name="password" ngModel required placeholder="enter the password" type="password" style="border: solid"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button expand="block" type="reset" >Reset</ion-button>
+          <ion-button expand="block" type="submit" [disabled]="form.invalid">Sign Up <ion-icon class="ion-text-lg-right" name="arrow-dropright-circle"></ion-icon>
+          </ion-button>
+        </ion-row>
+
+      </ion-grid>
+    </form>
+  </ion-card>
+</ion-content>
+<ion-footer class="ion-text-center">
+  <ion-toolbar color="secondary">
+    <ion-title (click)="goToRegister()">Don't have an account? Sign UP!</ion-title>
+  </ion-toolbar>
+</ion-footer>

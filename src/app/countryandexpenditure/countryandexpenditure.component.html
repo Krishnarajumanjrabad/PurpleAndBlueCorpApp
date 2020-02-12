@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+      Region and Expense Information    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="/assets/images/HelpUs.PNG" />
+ 
+  <ion-card >
+   
+    <ion-card-title text-center> Which region of the country do you belong to? </ion-card-title>
+    <ion-list>
+      <ion-radio-group (ionChange)='countryInfo($event)'>
+
+      <ion-item>
+        <ion-col>
+          <ion-label > <img src="/assets/images/upArrow.PNG" style="height: 50px;width: 75px;  "> </ion-label>
+          <ion-radio value="north" style="float: left; margin: auto;"></ion-radio>
+        </ion-col>
+        <ion-col>
+          <ion-label> <img src="/assets/images/downArrow.PNG" style="height: 50px;width: 75px; float: right;"></ion-label>
+          <ion-radio value="south" style="float: right; margin: auto;"></ion-radio>
+        </ion-col>
+       
+      </ion-item>
+      <ion-item>
+        <ion-col>
+          <ion-label ><h1><strong>North</strong></h1> </ion-label> </ion-col>
+        <ion-col>
+          <ion-label><h1><strong float-right>South</strong> </h1></ion-label></ion-col>
+      
+      </ion-item>
+      <ion-item>
+        <ion-col>
+          <ion-label><img src="/assets/images/upArrow.PNG" style="height: 50px;width: 75px;"></ion-label>
+          <ion-radio value="west" style="float: left; margin: auto;"></ion-radio>
+        </ion-col>
+        <ion-col>
+          <ion-label><img src="/assets/images/downArrow.PNG" style="height: 50px;width: 75px; float: right;"></ion-label>
+          <ion-radio value="east" style="float: right; margin: auto;"></ion-radio>
+        </ion-col>
+       
+      </ion-item>
+     
+      <ion-item>
+        <ion-col><ion-label ><h1><strong>West</strong></h1> </ion-label> </ion-col>
+        <ion-col><ion-label><h1><strong float-right>East</strong> </h1></ion-label></ion-col>
+        
+      </ion-item>
+
+    </ion-radio-group>
+
+    </ion-list>
+   
+   
+  </ion-card>
+  <ion-card >
+   
+    <ion-card-title text-center > What is your monthly expenditure? </ion-card-title>
+   
+    <ion-card-content text-center> 
+      <ion-input  [(ngModel)]="expense" inputmode="numeric" size="10"  maxlength="10"  style="border:solid;max-width: 30%;margin: auto;"></ion-input>
+    </ion-card-content>
+    
+    
+    
+   
+  </ion-card>
+  <ion-row justify-content-center>
+    <ion-button expand="block" (click) ='proceed()'>Proceed <ion-icon text-lg-right name="arrow-dropright-circle"></ion-icon></ion-button>
+  </ion-row>
+
+ 
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+   
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+      Qualification and Expense Information </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="/assets/images/HelpUs.PNG" />
+
+  <ion-card>
+
+    <ion-card-title text-center> Highest Educational Qualification ? </ion-card-title>
+
+    <ion-list>
+      <ion-radio-group (ionChange)='qualificationInfo($event)'>
+      <ion-item>
+        <ion-label>High School Dilemma</ion-label>
+        <ion-radio value="High School Dilemma"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Bachelor's Degree</ion-label>
+        <ion-radio value="Bachelor Degree"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Master's Degree</ion-label>
+        <ion-radio value="Master Degree"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>PhD</ion-label>
+        <ion-radio value="PhD"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Others</ion-label>
+        <ion-radio value="other"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    </ion-list>
+
+  </ion-card>
+  <ion-card>
+
+    <ion-card-title text-center> What is your monthly income ? </ion-card-title>
+
+    <ion-list>
+      <ion-radio-group (ionChange)='salaryInfo($event)'>
+
+        <ion-item>
+          <ion-label>
+            <5000</ion-label> <ion-radio value="<5000">
+              </ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>5000-15000</ion-label>
+          <ion-radio value="5000-15000"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>15001-20000</ion-label>
+          <ion-radio value="15001-30000"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>20001-45000</ion-label>
+          <ion-radio value="20001-45000"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>>45001</ion-label>
+          <ion-radio value=">45001"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+  </ion-card>
+  <ion-row justify-content-center>
+    <ion-button expand="block" (click)='process()'>Proceed <ion-icon text-lg-right name="arrow-dropright-circle">
+      </ion-icon>
+    </ion-button>
+  </ion-row>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+
+  </ion-toolbar>
+</ion-footer>

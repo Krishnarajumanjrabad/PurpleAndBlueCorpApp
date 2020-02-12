@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  <!--   <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> -->
+    <ion-title class="ion-text-center">
+      Purple And Blue Corp App
+    </ion-title>
+    <span *ngIf="userInfo" float-end > <small>Welcome {{ userInfo }}</small></span>
+
+     <!-- Side menu button -->
+     <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="!userInfo">
+    <img src="/assets/images/appImage.PNG" />
+  </div>
+  <div *ngIf="userInfo">
+    <img src="/assets/images/marchant.PNG" />
+    <p></p>
+    <ion-card>
+      <ion-list>
+        <ion-item>
+          <ion-input type="number" inputmode="numeric" style="border:solid;max-width: 20%;margin: auto;"></ion-input>
+        </ion-item>
+
+        <ion-item-divider></ion-item-divider>
+        <ion-item style="justify-items: center;margin: auto;">
+          <ion-button style="margin: auto;">Proceed<ion-icon text-lg-right name="arrow-dropright-circle"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
+ </ion-content>
+<ion-footer>
+  <ion-toolbar  color="secondary">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>

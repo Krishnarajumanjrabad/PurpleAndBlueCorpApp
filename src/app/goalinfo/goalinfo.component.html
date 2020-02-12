@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+     Personal Goal Information    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="/assets/images/HelpUs.PNG" />
+ 
+  <ion-card >
+   
+    <ion-card-title justify-content-center><img src="/assets/images/personalGoals.PNG" style="height: 200px;width: 200px;margin:auto"></ion-card-title>
+    
+   
+    <ion-item-divider></ion-item-divider>
+    <ion-list>
+      <ion-item>
+        <ion-label position="fixed" style="margin: auto;" text-wrap><strong>What is your Goal?</strong></ion-label>
+        <ion-input type="number" inputmode="numeric" max="12" [(ngModel)]="goal" size="15" style="border:solid;max-width: 30%;margin: auto;"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" style="margin: auto;" ><strong>Cost </strong></ion-label>
+        <ion-input type="number" inputmode="numeric" max="12" size="15"  [(ngModel)]="cost" style="border:solid;max-width: 30%;margin: auto;"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed"  style="margin: auto;" text-wrap> <strong> Expected Time to  achieve your Goal </strong></ion-label>
+        <ion-input type="number"inputmode="numeric"  max="5" size="5"  [(ngModel)]="expectedTime" style="border:solid;max-width: 30%;margin: auto;"></ion-input>
+      </ion-item>
+      <ion-row justify-content-center>
+        <ion-button expand="block" (click) ='proceed()'>Proceed <ion-icon text-lg-right name="arrow-dropright-circle"></ion-icon></ion-button>
+      </ion-row>
+    </ion-list>
+
+   
+  </ion-card>
+ 
+
+ 
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="secondary">
+   
+  </ion-toolbar>
+</ion-footer>

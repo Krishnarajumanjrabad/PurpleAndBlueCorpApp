@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+       Registration    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="/assets/images/appImage.PNG" />
+ 
+  <ion-card >
+    
+    <ion-card-title text-center>Create Account </ion-card-title>
+    <form  #form="ngForm" (ngSubmit)="register(form)">
+      <ion-grid>
+        <ion-row>
+          <ion-col> <img src="/assets/images/personImage.PNG" style="width: 60px;height: 30px; float: right;"> </ion-col>
+          <ion-col> <ion-input name="name" placeholder="enter the Name" style="border: solid" ngModel required></ion-input></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col> <img src="/assets/images/email-icon.PNG" style="width: 55px;height: 30px;float: right;"> </ion-col>
+          <ion-col> <ion-input name="email" placeholder="enter the user id " type="email" style="border: solid" ngModel required></ion-input></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><img src="/assets/images/passwordImg.PNG" style="width: 55px;height: 30px; float: right;"></ion-col>
+          <ion-col><ion-input name="password" placeholder="enter the password" type="password" style="border: solid" ngModel required></ion-input></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><img src="/assets/images/passwordImg.PNG" style="width: 55px;height: 30px; float: right;"></ion-col>
+          <ion-col><ion-input name="confirmPassword" placeholder="please confirm password" type="password" style="border: solid" ngModel required></ion-input></ion-col>
+        </ion-row>
+        <ion-row justify-content-center>
+         <ion-button expand="block" >Clear</ion-button>
+          <ion-button expand="block" type="submit"  [disabled]="form.invalid">Sign Up <ion-icon text-lg-right name="arrow-dropright-circle"></ion-icon></ion-button>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-card>
+</ion-content>
+<ion-footer text-center>
+  <ion-toolbar color="secondary">
+    <ion-title (click)="goLogin()">Already you have an account? Sign In!</ion-title>
+  </ion-toolbar></ion-footer>
